@@ -4,13 +4,29 @@
   
     
     <entry>
-      <title>test</title>
+      <title></title>
       <link href="/2022/07/22/test/"/>
       <url>/2022/07/22/test/</url>
       
-        <content type="html"><![CDATA[<p>tags:<br>    - test<br>    - 测试<br>categories:<br>    - test<br>    - 测试</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="title-test"><a href="#title-test" class="headerlink" title="title: test"></a>title: test</h2>]]></content>
       
       
+      <categories>
+          
+          <category> 个人网站 </category>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> test </tag>
+            
+            <tag> 测试 </tag>
+            
+        </tags>
       
     </entry>
     

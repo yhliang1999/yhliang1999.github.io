@@ -3,3 +3,7 @@ http://yhliang1999.github.io/categories/index.html
 http://yhliang1999.github.io/tags/index.html
 http://yhliang1999.github.io/2022/07/22/hello-world/
 http://yhliang1999.github.io/
+http://yhliang1999.github.io/source/tags/test/
+http://yhliang1999.github.io/source/tags/%E6%B5%8B%E8%AF%95/
+http://yhliang1999.github.io/categories/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/
+http://yhliang1999.github.io/categories/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/%E6%95%99%E7%A8%8B/
