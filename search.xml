@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>test</title>
+      <link href="/2022/07/22/test/"/>
+      <url>/2022/07/22/test/</url>
+      
+        <content type="html"><![CDATA[<p>tags:<br>    - test<br>    - 测试<br>categories:<br>    - test<br>    - 测试</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2022/07/22/hello-world/"/>
       <url>/2022/07/22/hello-world/</url>
