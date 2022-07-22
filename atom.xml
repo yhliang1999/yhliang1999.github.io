@@ -6,7 +6,7 @@
   <link href="http://yhliang1999.github.io/atom.xml" rel="self"/>
   
   <link href="http://yhliang1999.github.io/"/>
-  <updated>2022-07-22T11:23:55.418Z</updated>
+  <updated>2022-07-22T11:27:27.507Z</updated>
   <id>http://yhliang1999.github.io/</id>
   
   <author>
@@ -17,19 +17,12 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>test</title>
     <link href="http://yhliang1999.github.io/2022/07/22/test/"/>
     <id>http://yhliang1999.github.io/2022/07/22/test/</id>
     <published>2022-07-22T11:05:02.360Z</published>
-    <updated>2022-07-22T11:23:55.418Z</updated>
+    <updated>2022-07-22T11:27:27.507Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="title-test"><a href="#title-test" class="headerlink" title="title: test"></a>title: test</h2>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;title-test&quot;&gt;&lt;a href=&quot;#title-test&quot; class=&quot;headerlink&quot; title=&quot;title: test&quot;&gt;&lt;/a&gt;title: test&lt;/h2&gt;</summary>
-      
     
     
     
@@ -38,9 +31,9 @@
     <category term="教程" scheme="http://yhliang1999.github.io/categories/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="test" scheme="http://yhliang1999.github.io/source/tags/test/"/>
+    <category term="test" scheme="http://yhliang1999.github.io/tags/test/"/>
     
-    <category term="测试" scheme="http://yhliang1999.github.io/source/tags/%E6%B5%8B%E8%AF%95/"/>
+    <category term="测试" scheme="http://yhliang1999.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   
