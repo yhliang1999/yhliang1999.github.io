@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yhliang1999.github.io/2022/07/22/test/</loc>
+    <loc>http://yhliang1999.github.io/2022/07/22/template/</loc>
     
     <lastmod>2022-07-22</lastmod>
     
@@ -28,15 +28,6 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>http://yhliang1999.github.io/2022/07/22/hello-world/</loc>
-    
-    <lastmod>2022-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
   <url>
     <loc>http://yhliang1999.github.io/</loc>
@@ -47,14 +38,7 @@
 
   
   <url>
-    <loc>http://yhliang1999.github.io/tags/test/</loc>
-    <lastmod>2022-07-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://yhliang1999.github.io/tags/%E6%B5%8B%E8%AF%95/</loc>
+    <loc>http://yhliang1999.github.io/tags/asr/</loc>
     <lastmod>2022-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -63,14 +47,7 @@
 
   
   <url>
-    <loc>http://yhliang1999.github.io/categories/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</loc>
-    <lastmod>2022-07-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://yhliang1999.github.io/categories/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/%E6%95%99%E7%A8%8B/</loc>
+    <loc>http://yhliang1999.github.io/categories/asr/</loc>
     <lastmod>2022-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
