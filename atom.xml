@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>一时兴起的书房</title>
   
+  <subtitle>YHL的个人博客</subtitle>
+  <link href="http://yhliang1999.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/atom.xml" rel="self"/>
-  
-  <link href="http://example.com/"/>
+  <link href="http://yhliang1999.github.io/"/>
   <updated>2022-07-22T09:02:27.057Z</updated>
-  <id>http://example.com/</id>
+  <id>http://yhliang1999.github.io/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>Liang Yuhao</name>
     
   </author>
   
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://example.com/2022/07/22/hello-world/"/>
-    <id>http://example.com/2022/07/22/hello-world/</id>
+    <link href="http://yhliang1999.github.io/2022/07/22/hello-world/"/>
+    <id>http://yhliang1999.github.io/2022/07/22/hello-world/</id>
     <published>2022-07-22T09:27:38.089Z</published>
     <updated>2022-07-22T09:02:27.057Z</updated>
     
