@@ -20,18 +20,23 @@
     var CONFIG = {"hostname":"yhliang1999.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="article">
-<meta property="og:title" content="template">
-<meta property="og:url" content="http://yhliang1999.github.io/2022/07/22/template/index.html">
+  <meta name="description" content="作者：Naoyuki Kanda, Jian Wu, Yu Wu, Xiong Xiao, Zhong Meng, Xiaofei Wang, Yashesh Gaur,Zhuo Chen, Jinyu Li, Takuya Yoshiokapaper link: https:&#x2F;&#x2F;arxiv.org&#x2F;abs&#x2F;2202.00842v1机构：Microsoft Cloud+AI, USA Micros">
+<meta property="og:type" content="article">
+<meta property="og:title" content="论文阅读——t-sot:Streaming Multi-Talker ASR with Token-Level Serialized Output Training">
+<meta property="og:url" content="http://yhliang1999.github.io/2022/07/23/Streaming%20Multi-Talker%20ASR%20with%20Token-Level%20Serialized%20Output%20Training/index.html">
 <meta property="og:site_name" content="一时兴起的书房">
+<meta property="og:description" content="作者：Naoyuki Kanda, Jian Wu, Yu Wu, Xiong Xiao, Zhong Meng, Xiaofei Wang, Yashesh Gaur,Zhuo Chen, Jinyu Li, Takuya Yoshiokapaper link: https:&#x2F;&#x2F;arxiv.org&#x2F;abs&#x2F;2202.00842v1机构：Microsoft Cloud+AI, USA Micros">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-07-22T11:05:02.360Z">
-<meta property="article:modified_time" content="2022-07-22T11:31:45.189Z">
+<meta property="article:published_time" content="2022-07-23T14:03:50.557Z">
+<meta property="article:modified_time" content="2022-07-23T14:26:18.202Z">
 <meta property="article:author" content="梁宇颢">
 <meta property="article:tag" content="asr">
+<meta property="article:tag" content="multi-talker">
+<meta property="article:tag" content="streaming">
+<meta property="article:tag" content="Microsoft">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yhliang1999.github.io/2022/07/22/template/">
+<link rel="canonical" href="http://yhliang1999.github.io/2022/07/23/Streaming%20Multi-Talker%20ASR%20with%20Token-Level%20Serialized%20Output%20Training/">
 
 
 <script id="page-configurations">
@@ -44,7 +49,7 @@
   };
 </script>
 
-  <title>template | 一时兴起的书房</title>
+  <title>论文阅读——t-sot:Streaming Multi-Talker ASR with Token-Level Serialized Output Training | 一时兴起的书房</title>
   
 
 
@@ -161,7 +166,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yhliang1999.github.io/2022/07/22/template/">
+    <link itemprop="mainEntityOfPage" href="http://yhliang1999.github.io/2022/07/23/Streaming%20Multi-Talker%20ASR%20with%20Token-Level%20Serialized%20Output%20Training/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/my_image/profile.png">
@@ -174,7 +179,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          template
+          论文阅读——t-sot:Streaming Multi-Talker ASR with Token-Level Serialized Output Training
         </h1>
 
         <div class="post-meta">
@@ -185,7 +190,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-07-22 19:05:02 / 修改时间：19:31:45" itemprop="dateCreated datePublished" datetime="2022-07-22T19:05:02+08:00">2022-07-22</time>
+              <time title="创建时间：2022-07-23 22:03:50 / 修改时间：22:26:18" itemprop="dateCreated datePublished" datetime="2022-07-23T22:03:50+08:00">2022-07-23</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -193,7 +198,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/asr/" itemprop="url" rel="index"><span itemprop="name">asr</span></a>
+                  <a href="/categories/multi-talker-asr/" itemprop="url" rel="index"><span itemprop="name">multi-talker asr</span></a>
                 </span>
             </span>
 
@@ -208,7 +213,27 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        
+        <h3 id="作者：Naoyuki-Kanda-Jian-Wu-Yu-Wu-Xiong-Xiao-Zhong-Meng-Xiaofei-Wang-Yashesh-Gaur-Zhuo-Chen-Jinyu-Li-Takuya-Yoshioka"><a href="#作者：Naoyuki-Kanda-Jian-Wu-Yu-Wu-Xiong-Xiao-Zhong-Meng-Xiaofei-Wang-Yashesh-Gaur-Zhuo-Chen-Jinyu-Li-Takuya-Yoshioka" class="headerlink" title="作者：Naoyuki Kanda, Jian Wu, Yu Wu, Xiong Xiao, Zhong Meng, Xiaofei Wang, Yashesh Gaur,Zhuo Chen, Jinyu Li, Takuya Yoshioka"></a>作者：Naoyuki Kanda, Jian Wu, Yu Wu, Xiong Xiao, Zhong Meng, Xiaofei Wang, Yashesh Gaur,Zhuo Chen, Jinyu Li, Takuya Yoshioka</h3><h3 id="paper-link-https-arxiv-org-abs-2202-00842v1"><a href="#paper-link-https-arxiv-org-abs-2202-00842v1" class="headerlink" title="paper link: https://arxiv.org/abs/2202.00842v1"></a>paper link: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2202.00842v1">https://arxiv.org/abs/2202.00842v1</a></h3><h3 id="机构：Microsoft-Cloud-AI-USA-Microsoft-Research-Asia-China"><a href="#机构：Microsoft-Cloud-AI-USA-Microsoft-Research-Asia-China" class="headerlink" title="机构：Microsoft Cloud+AI, USA Microsoft Research Asia, China"></a>机构：Microsoft Cloud+AI, USA Microsoft Research Asia, China</h3><h3 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h3><pre><code>微软的Naoyuki Kanda这个团队做multi-talker asr已经好几年了，每年都会看到他们尝试从不同角度解决多说话人场景下说话人交叠的问题，基本上也涵盖了现在的会议场景asr的所有解决问题的思路（asr本身、声纹、分离），经过一系列的探索以后，算是返璞归真，目前存在的多说话人asr模型存在诸多缺点：无法流式（sot）,多个输出头，推理复杂度高（surt、MS-RNN-T）
+- 贡献：
+  - 提出了一种字级别的sot，可以支持流式的训练和推理并且实现了sota的结果
+
+- 方法：
+  - sot：将句子或者说话人按先进先出的排列顺序组织label
+
+  - 最多同时有两人说话的t-sot:
+
+
+    - 当同时最多只有两个人说话的时候，因为说话人和通道并不是严格绑定的，因此最多需要2个虚拟的输出通道，只要一个&lt;cc&gt;标记用来标记通道的转换时机，按照每个token的结束时间顺序输出，可以得到一个连续的识别序列，再通过反序列化的方式就可以得到可供阅读的识别结果
+  - 同时有最多M个人说话的情况：
+    - 由于涉及的说话人多于2个，就需要不同分隔符&lt;cci&gt;来指示当前解出的token应该属于哪个通道，引入bi实现通道的回收
+
+- 实验结果：
+  - 只做了2人同时说话的实验，分别在librispeechmix和libricss上评估，librispeechmix包含单人和双人的两种集合
+  - 训练数据是通过混合librispeech train960中两个句子仿真的，首先按50%的概率生成混合音频，混合时第二句相比第一句的实验时从0-len(u1)的均匀分布中采样得到的，使用Montreal Forced Aligner拿到token级别的对齐用来生成序列化的label
+  - 流式的模型选用transformer-transducer，TT-18表示encoder有18层transformer，通过控制attention时的mask控制流式时延大小，
+  - 针对libricss的测试集，用之前librispeechmix上验证的模型做初始化，训练数据改成随机1-5人发言，并且加噪加混响以适应测试集的声学环境
+</code></pre>
+
     </div>
 
     
@@ -237,6 +262,9 @@
       <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/asr/" rel="tag"># asr</a>
+              <a href="/tags/multi-talker/" rel="tag"># multi-talker</a>
+              <a href="/tags/streaming/" rel="tag"># streaming</a>
+              <a href="/tags/Microsoft/" rel="tag"># Microsoft</a>
           </div>
 
         
@@ -244,11 +272,11 @@
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2022/07/23/Streaming%20Multi-Talker%20ASR%20with%20Token-Level%20Serialized%20Output%20Training/" rel="next" title="论文阅读——t-sot:Streaming Multi-Talker ASR with Token-Level Serialized Output Training">
-      论文阅读——t-sot:Streaming Multi-Talker ASR with Token-Level Serialized Output Training <i class="fa fa-chevron-right"></i>
+    <a href="/2022/07/22/template/" rel="prev" title="template">
+      <i class="fa fa-chevron-left"></i> template
     </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -307,6 +335,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%9C%E8%80%85%EF%BC%9ANaoyuki-Kanda-Jian-Wu-Yu-Wu-Xiong-Xiao-Zhong-Meng-Xiaofei-Wang-Yashesh-Gaur-Zhuo-Chen-Jinyu-Li-Takuya-Yoshioka"><span class="nav-number">1.</span> <span class="nav-text">作者：Naoyuki Kanda, Jian Wu, Yu Wu, Xiong Xiao, Zhong Meng, Xiaofei Wang, Yashesh Gaur,Zhuo Chen, Jinyu Li, Takuya Yoshioka</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#paper-link-https-arxiv-org-abs-2202-00842v1"><span class="nav-number">2.</span> <span class="nav-text">paper link: https:&#x2F;&#x2F;arxiv.org&#x2F;abs&#x2F;2202.00842v1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%BA%E6%9E%84%EF%BC%9AMicrosoft-Cloud-AI-USA-Microsoft-Research-Asia-China"><span class="nav-number">3.</span> <span class="nav-text">机构：Microsoft Cloud+AI, USA Microsoft Research Asia, China</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80%EF%BC%9A"><span class="nav-number">4.</span> <span class="nav-text">前言：</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

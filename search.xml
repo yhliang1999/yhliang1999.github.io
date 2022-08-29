@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>论文阅读——t-sot:Streaming Multi-Talker ASR with Token-Level Serialized Output Training</title>
+      <link href="/2022/07/23/Streaming%20Multi-Talker%20ASR%20with%20Token-Level%20Serialized%20Output%20Training/"/>
+      <url>/2022/07/23/Streaming%20Multi-Talker%20ASR%20with%20Token-Level%20Serialized%20Output%20Training/</url>
+      
+        <content type="html"><![CDATA[<h3 id="作者：Naoyuki-Kanda-Jian-Wu-Yu-Wu-Xiong-Xiao-Zhong-Meng-Xiaofei-Wang-Yashesh-Gaur-Zhuo-Chen-Jinyu-Li-Takuya-Yoshioka"><a href="#作者：Naoyuki-Kanda-Jian-Wu-Yu-Wu-Xiong-Xiao-Zhong-Meng-Xiaofei-Wang-Yashesh-Gaur-Zhuo-Chen-Jinyu-Li-Takuya-Yoshioka" class="headerlink" title="作者：Naoyuki Kanda, Jian Wu, Yu Wu, Xiong Xiao, Zhong Meng, Xiaofei Wang, Yashesh Gaur,Zhuo Chen, Jinyu Li, Takuya Yoshioka"></a>作者：Naoyuki Kanda, Jian Wu, Yu Wu, Xiong Xiao, Zhong Meng, Xiaofei Wang, Yashesh Gaur,Zhuo Chen, Jinyu Li, Takuya Yoshioka</h3><h3 id="paper-link-https-arxiv-org-abs-2202-00842v1"><a href="#paper-link-https-arxiv-org-abs-2202-00842v1" class="headerlink" title="paper link: https://arxiv.org/abs/2202.00842v1"></a>paper link: <a href="https://arxiv.org/abs/2202.00842v1">https://arxiv.org/abs/2202.00842v1</a></h3><h3 id="机构：Microsoft-Cloud-AI-USA-Microsoft-Research-Asia-China"><a href="#机构：Microsoft-Cloud-AI-USA-Microsoft-Research-Asia-China" class="headerlink" title="机构：Microsoft Cloud+AI, USA Microsoft Research Asia, China"></a>机构：Microsoft Cloud+AI, USA Microsoft Research Asia, China</h3><h3 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h3><pre><code>微软的Naoyuki Kanda这个团队做multi-talker asr已经好几年了，每年都会看到他们尝试从不同角度解决多说话人场景下说话人交叠的问题，基本上也涵盖了现在的会议场景asr的所有解决问题的思路（asr本身、声纹、分离），经过一系列的探索以后，算是返璞归真，目前存在的多说话人asr模型存在诸多缺点：无法流式（sot）,多个输出头，推理复杂度高（surt、MS-RNN-T）- 贡献：  - 提出了一种字级别的sot，可以支持流式的训练和推理并且实现了sota的结果- 方法：  - sot：将句子或者说话人按先进先出的排列顺序组织label  - 最多同时有两人说话的t-sot:    - 当同时最多只有两个人说话的时候，因为说话人和通道并不是严格绑定的，因此最多需要2个虚拟的输出通道，只要一个&lt;cc&gt;标记用来标记通道的转换时机，按照每个token的结束时间顺序输出，可以得到一个连续的识别序列，再通过反序列化的方式就可以得到可供阅读的识别结果  - 同时有最多M个人说话的情况：    - 由于涉及的说话人多于2个，就需要不同分隔符&lt;cci&gt;来指示当前解出的token应该属于哪个通道，引入bi实现通道的回收- 实验结果：  - 只做了2人同时说话的实验，分别在librispeechmix和libricss上评估，librispeechmix包含单人和双人的两种集合  - 训练数据是通过混合librispeech train960中两个句子仿真的，首先按50%的概率生成混合音频，混合时第二句相比第一句的实验时从0-len(u1)的均匀分布中采样得到的，使用Montreal Forced Aligner拿到token级别的对齐用来生成序列化的label  - 流式的模型选用transformer-transducer，TT-18表示encoder有18层transformer，通过控制attention时的mask控制流式时延大小，  - 针对libricss的测试集，用之前librispeechmix上验证的模型做初始化，训练数据改成随机1-5人发言，并且加噪加混响以适应测试集的声学环境</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> multi-talker asr </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> asr </tag>
+            
+            <tag> multi-talker </tag>
+            
+            <tag> streaming </tag>
+            
+            <tag> Microsoft </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>template</title>
       <link href="/2022/07/22/template/"/>
       <url>/2022/07/22/template/</url>
